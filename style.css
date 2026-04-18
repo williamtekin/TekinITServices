@@ -3,7 +3,6 @@
    Luxury minimalist · Deep black · Gold accent
    ========================================================== */
 
-/* --- TOKENS --------------------------------------------- */
 :root {
   --black:   #080808;
   --near:    #0f0f0f;
@@ -26,7 +25,6 @@
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* --- RESET ---------------------------------------------- */
 *,
 *::before,
 *::after {
@@ -59,7 +57,6 @@ ul { list-style: none; }
 img, video, svg { display: block; max-width: 100%; }
 input, textarea, button { font-family: inherit; font-size: inherit; }
 
-/* --- UTILITIES ------------------------------------------ */
 .eyebrow {
   font-family: var(--ff-body);
   font-size: 0.72rem;
@@ -90,18 +87,15 @@ input, textarea, button { font-family: inherit; font-size: inherit; }
               transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
   white-space: nowrap;
 }
-
 .btn:hover {
   background: var(--gold);
   color: var(--black);
   transform: translateY(-2px);
   box-shadow: 0 8px 32px rgba(201,168,76,0.25);
 }
-
 .btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
 .btn--full { width: 100%; }
 
-/* --- REVEAL -------------------------------------------- */
 .reveal {
   opacity: 0;
   transform: translateY(28px);
@@ -111,7 +105,6 @@ input, textarea, button { font-family: inherit; font-size: inherit; }
 .step:nth-child(2).reveal { transition-delay: 0.1s; }
 .step:nth-child(3).reveal { transition-delay: 0.2s; }
 
-/* --- NAV ----------------------------------------------- */
 .nav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -152,7 +145,6 @@ input, textarea, button { font-family: inherit; font-size: inherit; }
 }
 .nav__cta-link:hover { color: var(--gold); }
 
-/* --- HERO ---------------------------------------------- */
 .hero {
   position: relative;
   min-height: 100svh;
@@ -240,7 +232,6 @@ input, textarea, button { font-family: inherit; font-size: inherit; }
   to   { transform: translateX(-50%); }
 }
 
-/* --- PAKET --------------------------------------------- */
 .paket {
   position: relative;
   overflow: hidden;
@@ -354,7 +345,6 @@ input, textarea, button { font-family: inherit; font-size: inherit; }
   white-space: nowrap;
 }
 
-/* --- PROZESS ------------------------------------------- */
 .prozess {
   padding: 100px 0;
   border-bottom: 1px solid var(--line);
@@ -405,7 +395,6 @@ input, textarea, button { font-family: inherit; font-size: inherit; }
   line-height: 1.75;
 }
 
-/* --- KONTAKT ------------------------------------------- */
 .kontakt { padding: 100px 0; }
 .kontakt__inner {
   max-width: 1080px;
@@ -424,6 +413,25 @@ input, textarea, button { font-family: inherit; font-size: inherit; }
   color: var(--white);
   margin-bottom: 40px;
 }
+
+/* --- FOTO ------------------------------------------- */
+.kontakt__person {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+.kontakt__foto {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 1px solid var(--line-hi);
+  flex-shrink: 0;
+  filter: grayscale(20%);
+}
+
 .kontakt__details { display: flex; flex-direction: column; gap: 10px; }
 .kontakt__name {
   font-size: 0.88rem;
@@ -443,7 +451,6 @@ input, textarea, button { font-family: inherit; font-size: inherit; }
 }
 .kontakt__link:hover { color: var(--gold); border-bottom-color: var(--gold); }
 
-/* --- FORM ---------------------------------------------- */
 .form { display: flex; flex-direction: column; gap: 20px; }
 .form__field { display: flex; flex-direction: column; gap: 8px; }
 .form__field label {
@@ -479,7 +486,6 @@ input, textarea, button { font-family: inherit; font-size: inherit; }
 }
 .form__confirm { font-size: 0.85rem; color: var(--gold); text-align: center; min-height: 20px; }
 
-/* --- FOOTER -------------------------------------------- */
 .footer { border-top: 1px solid var(--line); padding: 28px 0; }
 .footer__inner {
   max-width: 1080px;
@@ -497,7 +503,6 @@ input, textarea, button { font-family: inherit; font-size: inherit; }
   color: var(--dim);
 }
 
-/* --- RESPONSIVE ---------------------------------------- */
 @media (min-width: 700px) {
   .steps { grid-template-columns: repeat(3, 1fr); }
   .kontakt__inner { grid-template-columns: 1fr 1fr; align-items: start; }
